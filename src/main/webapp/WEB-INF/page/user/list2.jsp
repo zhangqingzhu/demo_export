@@ -17,7 +17,7 @@
 var meg = '${status}';
 if( meg != '' ){
 	  alert("下载成功！");
-	  parent.main_right.location="<%=basePath%>user";
+	  parent.main_right.location="<%=basePath%>userByWord";
 	  parent.layer.closeAll();
 }
 </script>
@@ -38,10 +38,8 @@ if( meg != '' ){
 <body>
 <h3>请选择导出方式</h3>
 <ul>
-<a href="<%=basePath%>user/excel_exportHtml">1.导出到excel(poi_网页版)</a></br>
-<a href="<%=basePath%>user/excel_exportXlsx">2.导出到excel(poi_xlsx版)</a></br>
-<a href="<%=basePath%>user/excel_exportHtmlByJxl">3.导出到excel(jxl_网页版)</a></br>
-<a href="<%=basePath%>user/excel_exportXls">4.导出到excel(jxl_xls版)</a></br>
+<a href="<%=basePath%>userByWord/word_export">1.导出到Word</a></br>
+
 </ul>
 <div class="div">
 	<table border="1">

@@ -21,4 +21,10 @@ public interface UserService {
 	 * @return
 	 */
 	List<User> listByExcel();
+	/**
+	 * 导出word
+	 * @param userLists
+	 * @return
+	 */
+	String exportWord(List<User> userLists);
 }

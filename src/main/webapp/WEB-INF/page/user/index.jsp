@@ -16,7 +16,8 @@
 <body>  
     <h1>  
     	欢迎：${sessionScope.name}用户<br/>
-       <a href="<%=basePath%>user">查看所有用户信息</a><br/>  
+       <a href="<%=basePath%>user">1、查看所有用户信息(Excel导出)</a><br/>
+       <a href="<%=basePath%>userByWord">2、查看所有用户信息(Word导出)</a><br/>  
     </h1>  
 </body>  
 </html> 
