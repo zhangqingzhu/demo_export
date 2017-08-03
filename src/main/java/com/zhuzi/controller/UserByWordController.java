@@ -2,6 +2,8 @@ package com.zhuzi.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +51,18 @@ public class UserByWordController{
 		model.addAttribute("userLists",userLists);
 		return "/list2";
 	}
-	
+	/**
+	 * 导出word(网页版)
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping(value="word_exportByHtml",method=RequestMethod.GET)
+	public String word_exportByHtml(Model model,HttpServletResponse resp){
+		//获取所有用户列表
+		List<User> userLists = userService.listUser();
+	    userService.exportWordByHtml(userLists, resp);
+		return null;
+	}
 	@Autowired
 	UserService userService;
 	private static Logger logger = LoggerFactory.getLogger(UserByWordController.class);

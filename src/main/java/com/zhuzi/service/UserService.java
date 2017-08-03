@@ -2,6 +2,8 @@ package com.zhuzi.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import com.zhuzi.pojo.User;
 
 public interface UserService {
@@ -27,4 +29,11 @@ public interface UserService {
 	 * @return
 	 */
 	String exportWord(List<User> userLists);
+	/**
+	 * 导出word(网页版)
+	 * @param userLists
+	 * @return
+	 */
+	String exportWordByHtml(List<User> userLists,HttpServletResponse resp);
+	
 }

@@ -39,6 +39,7 @@ if( meg != '' ){
 <h3>请选择导出方式</h3>
 <ul>
 <a href="<%=basePath%>userByWord/word_export">1.导出到Word</a></br>
+<a href="<%=basePath%>userByWord/word_exportByHtml">2.导出到Word(网页版)</a></br>
 
 </ul>
 <div class="div">
